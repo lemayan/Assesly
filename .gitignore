@@ -1,0 +1,19 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store
+
+# Env
+backend/.env
+backend/prisma/dev.db
+backend/prisma/*.db*
+
+# IDE & OS
+.vscode
+.DS_Store
+
+# Build
+backend/dist
+frontend/dist

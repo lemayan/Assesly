@@ -1,0 +1,86 @@
+// Prisma schema for Examina
+// MySQL via XAMPP
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         String    @default("student")
+  createdAt    DateTime  @default(now())
+  exams        Exam[]    @relation("ExamCreator")
+  results      Result[]
+}
+
+model Exam {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String?
+  duration    Int        // minutes
+  mode        String     @default("exam")
+  createdBy   Int
+  createdAt   DateTime   @default(now())
+
+  creator     User       @relation("ExamCreator", fields: [createdBy], references: [id])
+  questions   Question[]
+  results     Result[]
+}
+
+model Question {
+  id        Int       @id @default(autoincrement())
+  examId    Int?
+  text      String
+  subject   String?
+  topic     String
+  difficulty String
+  rationale String
+  hint      String?
+  options   Option[]
+  answers   Answer[]
+
+  exam      Exam?     @relation(fields: [examId], references: [id])
+}
+
+model Option {
+  id         Int      @id @default(autoincrement())
+  questionId Int
+  text       String
+  isCorrect  Boolean  @default(false)
+
+  question   Question @relation(fields: [questionId], references: [id])
+  answers    Answer[]
+}
+
+model Result {
+  id         Int        @id @default(autoincrement())
+  userId     Int
+  examId     Int
+  score      Int
+  percentage Float
+  createdAt  DateTime   @default(now())
+
+  user       User       @relation(fields: [userId], references: [id])
+  exam       Exam       @relation(fields: [examId], references: [id])
+  answers    Answer[]
+}
+
+model Answer {
+  id               Int      @id @default(autoincrement())
+  resultId         Int
+  questionId       Int
+  selectedOptionId Int
+  isCorrect        Boolean
+
+  result           Result   @relation(fields: [resultId], references: [id])
+  question         Question @relation(fields: [questionId], references: [id])
+  selectedOption   Option   @relation(fields: [selectedOptionId], references: [id])
+}
