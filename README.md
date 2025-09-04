@@ -25,6 +25,10 @@ Option B — Git clone
 
 Do these steps once to set up the API and database.
 
+## NB Before the installation process create a .env file in your backend i.e right click on backend, create new file , name it .env then paste this 
+DATABASE_URL="file:./prisma/dev.db"
+
+
 1) Backend (API)
 - In PowerShell:
    - cd backend
@@ -44,7 +48,7 @@ That’s it for setup. The database file lives at `backend/prisma/dev.db`.
 1) Start the backend API
 - In PowerShell:
    - cd backend
-   - npm run start
+   - npm run dev
 - The API listens on http://localhost:4000/api
 
 2) Start the frontend
