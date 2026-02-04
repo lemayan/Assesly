@@ -9,7 +9,7 @@ This guide is beginner‑friendly and focuses on Windows with PowerShell.
 
 ## What you need
 - Windows 10/11
-- Node.js LTS (18 or 20). Download from nodejs.org and install.
+- Node.js LTS (18 or 20). Download from nodejs.org and install. 
 - Git (optional, for cloning). Download from git-scm.com
 
 ## Get the project
@@ -24,7 +24,7 @@ Option B — Git clone
 ## First-time setup (5–8 minutes)
 
 Do these steps once to set up the API and database.
-
+ 
 ## NB Before the installation process create a .env file in your backend i.e right click on backend, create new file , name it .env then paste this 
 DATABASE_URL="file:./prisma/dev.db"
 
