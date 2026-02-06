@@ -10,6 +10,7 @@ import questionsRouter from './routes/questions';
 import resultsRouter from './routes/results';
 import aiRouter from './routes/ai';
 import adminRouter from './routes/admin';
+import seedRouter from './routes/seed';
 
 const app = express();
 const prisma = new PrismaClient();
@@ -50,6 +51,7 @@ app.use('/api/questions', questionsRouter);
 app.use('/api/results', resultsRouter);
 app.use('/api/ai', aiRouter);
 app.use('/api/admin', adminRouter);
+app.use('/api/seed', seedRouter);
 
 // Error handler
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
