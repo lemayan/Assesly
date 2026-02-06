@@ -1,5 +1,18 @@
 # Assessly / Examina
 
+## 🚀 Live Demo
+
+**Frontend:** [https://assesly.netlify.app](https://assesly.netlify.app)  
+**Backend API:** [https://assesly.onrender.com](https://assesly.onrender.com)
+
+### Demo Credentials:
+- **Admin:** admin@examina.local / password123
+- **Student:** student@examina.local / password123
+
+> **Note:** Backend may take 30-50 seconds to wake up on first request (free tier).
+
+---
+
 An exam and results platform built with:
 - Frontend: React + Vite + TypeScript + Tailwind
 - Backend: Node.js (Express) + Prisma ORM
