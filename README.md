@@ -1,100 +1,272 @@
-# Assessly / Examina
+<div align="center">
 
-## 🚀 Live Demo
+# 📝 Assesly
 
-**Frontend:** [https://assesly.netlify.app](https://assesly.netlify.app)  
-**Backend API:** [https://assesly.onrender.com](https://assesly.onrender.com)
+### Modern Exam Management & Assessment Platform
 
-### Demo Credentials:
-- **Admin:** admin@examina.local / password123
-- **Student:** student@examina.local / password123
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=netlify)](https://assesly.netlify.app)
+[![Backend](https://img.shields.io/badge/api-online-blue?style=for-the-badge&logo=render)](https://assesly.onrender.com)
+[![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)](LICENSE)
 
-> **Note:** Backend may take 30-50 seconds to wake up on first request (free tier).
+[Live Demo](https://assesly.netlify.app) • [Report Bug](https://github.com/lemayan/Assesly/issues) • [Request Feature](https://github.com/lemayan/Assesly/issues)
+
+</div>
 
 ---
 
-An exam and results platform built with:
-- Frontend: React + Vite + TypeScript + Tailwind
-- Backend: Node.js (Express) + Prisma ORM
-- Database: SQLite (file-based, no install needed)
+## 🚀 Quick Start
 
-This guide is beginner‑friendly and focuses on Windows with PowerShell.
+Try the live demo with these credentials:
 
-## What you need
-- Windows 10/11
-- Node.js LTS (18 or 20). Download from nodejs.org and install. 
-- Git (optional, for cloning). Download from git-scm.com
+| Role | Email | Password |
+|------|-------|----------|
+| **Admin** | admin@examina.local | password123 |
+| **Student** | student@examina.local | password123 |
 
-## Get the project
-Option A — Zip file
-- Unzip the project to a folder like `C:\Assessly`.
+> ⚠️ **Note:** Backend may take 30-50 seconds to wake up on first request (free tier limitation).
 
-Option B — Git clone
-- Open PowerShell and run:
-   - git clone https://github.com/lemayan/Assesly.git
-   - cd Assesly
+---
 
-## First-time setup (5–8 minutes)
+## ✨ Features
 
-Do these steps once to set up the API and database.
- 
-## NB Before the installation process create a .env file in your backend i.e right click on backend, create new file , name it .env then paste this 
-DATABASE_URL="file:./prisma/dev.db"
+### 👨‍💼 Admin Features
+- 📊 **Dashboard Analytics** - View exam statistics and performance metrics
+- ✏️ **Exam Management** - Create, edit, and delete exams
+- ❓ **Question Bank** - Manage questions with multiple choice options
+- 📤 **Bulk Import** - Import questions via CSV/Excel
+- 👥 **User Management** - Manage students and administrators
+- 📈 **Results Overview** - Monitor student performance across all exams
 
+### 👨‍🎓 Student Features
+- 📝 **Take Exams** - Clean, distraction-free exam interface
+- ⏱️ **Timed Assessments** - Automatic submission on timeout
+- 📊 **View Results** - Detailed performance breakdown
+- 🎯 **Progress Tracking** - Track scores and improvements
+- 📄 **PDF Reports** - Download detailed result reports
 
-1) Backend (API)
-- In PowerShell:
-   - cd backend
-   - npm install
-   - npm run prisma -- db push   (creates the SQLite database)
-   - npm run seed                (adds admin and sample data)
+### 🎨 UI/UX Features
+- 🌓 **Dark/Light Mode** - Toggle between themes
+- 📱 **Responsive Design** - Works seamlessly on all devices
+- 🎭 **Animated Backgrounds** - Beautiful cloud and night sky animations
+- 🎉 **Success Animations** - Celebratory confetti on exam completion
+- ⚡ **Fast & Modern** - Built with React and Vite for optimal performance
 
-2) Frontend (Web App)
-- In a new PowerShell window:
-   - cd frontend
-   - npm install
+---
 
-That’s it for setup. The database file lives at `backend/prisma/dev.db`.
+## 🛠️ Tech Stack
 
-## How to run (every time)
+### Frontend
+![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
-1) Start the backend API
-- In PowerShell:
-   - cd backend
-   - npm run dev
-- The API listens on http://localhost:4000/api
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Lightning-fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **React Router** - Client-side routing
+- **Axios** - HTTP client
+- **Recharts** - Data visualization
 
-2) Start the frontend
-- In another PowerShell window:
-   - cd frontend
-   - npm run dev
-- Open the URL it prints (usually http://localhost:5173)
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=flat&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4.19-000000?style=flat&logo=express&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-5.22-2D3748?style=flat&logo=prisma&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat&logo=postgresql&logoColor=white)
 
-## Log in
-- Admin: admin@examina.local / password123
-- Student: student@examina.local / password123
+- **Express.js** - Web framework
+- **Prisma ORM** - Database toolkit
+- **PostgreSQL** - Production database
+- **JWT** - Authentication
+- **bcrypt** - Password hashing
+- **Helmet** - Security middleware
 
-## Project structure
-- frontend/  React app (Vite) with Tailwind
-- backend/   Express API with Prisma (SQLite)
+### Deployment
+![Netlify](https://img.shields.io/badge/Netlify-Frontend-00C7B7?style=flat&logo=netlify&logoColor=white)
+![Render](https://img.shields.io/badge/Render-Backend-46E3B7?style=flat&logo=render&logoColor=white)
 
-## Troubleshooting
-- Can’t log in / shows “Network Error”
-   - Make sure the backend is running (window where you ran `npm run start` should say “API listening on …:4000”).
-   - If port 4000 is busy, stop other apps or set a custom port: set the env variable `PORT=4001` before launching the backend and then update the frontend API URL.
-- Blank page or “API offline” on login
-   - Frontend expects the API at http://localhost:4000/api. If you changed the port, set `VITE_API_URL` in `frontend/.env.local` accordingly.
-- Reset to clean sample data
-   - Stop the backend. Delete the file `backend/prisma/dev.db`. Then run from `backend`: `npm run prisma -- db push` and `npm run seed`.
+---
 
-## Production build (optional)
-- Backend (compile TS):
-   - cd backend
-   - npm run build
-   - npm run start
-- Frontend (build static files):
-   - cd frontend
-   - npm run build
-   - Use a static server (or keep running `npm run dev` for testing).
+## 📦 Installation
 
-For more details, see `backend/README.md` and `frontend/README.md`.
+### Prerequisites
+- Node.js 18+ ([Download](https://nodejs.org/))
+- Git ([Download](https://git-scm.com/))
+
+### Clone the Repository
+```bash
+git clone https://github.com/lemayan/Assesly.git
+cd Assesly
+```
+
+### Backend Setup
+
+1. **Navigate to backend folder**
+   ```bash
+   cd backend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Create `.env` file**
+   ```env
+   DATABASE_URL="file:./prisma/dev.db"
+   JWT_SECRET="your-secret-key-here"
+   NODE_ENV="development"
+   PORT=4000
+   ```
+
+4. **Initialize database**
+   ```bash
+   npx prisma db push
+   npm run seed
+   ```
+
+5. **Start the backend**
+   ```bash
+   npm run dev
+   ```
+   Backend will run on `http://localhost:4000`
+
+### Frontend Setup
+
+1. **Open a new terminal and navigate to frontend**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Create `.env.local` file** (optional for local dev)
+   ```env
+   VITE_API_URL=http://localhost:4000/api
+   ```
+
+4. **Start the frontend**
+   ```bash
+   npm run dev
+   ```
+   Frontend will run on `http://localhost:5173`
+
+### 🎉 You're Ready!
+Open [http://localhost:5173](http://localhost:5173) and log in with:
+- **Admin:** admin@examina.local / password123
+- **Student:** student@examina.local / password123
+
+---
+
+## 📁 Project Structure
+
+```
+Assesly/
+├── frontend/              # React frontend
+│   ├── src/
+│   │   ├── components/    # Reusable UI components
+│   │   ├── contexts/      # React Context providers
+│   │   ├── pages/         # Page components
+│   │   ├── lib/           # Utilities and HTTP client
+│   │   └── styles.css     # Global styles
+│   └── package.json
+│
+├── backend/               # Express backend
+│   ├── src/
+│   │   ├── routes/        # API routes
+│   │   ├── middleware/    # Custom middleware
+│   │   └── index.ts       # App entry point
+│   ├── prisma/
+│   │   ├── schema.prisma  # Database schema
+│   │   └── migrations/    # Database migrations
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## 🚀 Deployment
+
+### Deploy to Netlify (Frontend)
+
+1. Push your code to GitHub
+2. Go to [Netlify](https://app.netlify.com/)
+3. Click "Add new site" → "Import an existing project"
+4. Select your repository
+5. Configure build settings:
+   - **Base directory:** `frontend`
+   - **Build command:** `npm run build`
+   - **Publish directory:** `frontend/dist`
+6. Add environment variable:
+   - `VITE_API_URL` = Your backend URL
+7. Deploy!
+
+### Deploy to Render (Backend)
+
+1. Go to [Render](https://render.com/)
+2. Create a new **PostgreSQL** database
+3. Create a new **Web Service**
+4. Connect your GitHub repository
+5. Configure:
+   - **Root Directory:** `backend`
+   - **Build Command:** `npm install --include=dev && npx prisma generate && npm run build`
+   - **Start Command:** `npx prisma migrate resolve --rolled-back 20250829111232_lemayan && npx prisma migrate deploy && npm start`
+6. Add environment variables:
+   - `DATABASE_URL` = Your PostgreSQL connection string
+   - `JWT_SECRET` = Random 32+ character string
+   - `NODE_ENV` = `production`
+   - `CORS_ORIGINS` = Your Netlify frontend URL
+7. Deploy!
+
+For detailed deployment instructions, see [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) and [NETLIFY_DEPLOYMENT.md](NETLIFY_DEPLOYMENT.md).
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Lemayan**
+- GitHub: [@lemayan](https://github.com/lemayan)
+- Project Link: [https://github.com/lemayan/Assesly](https://github.com/lemayan/Assesly)
+
+---
+
+## 🙏 Acknowledgments
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma](https://www.prisma.io/)
+- [Netlify](https://www.netlify.com/)
+- [Render](https://render.com/)
+
+---
+
+<div align="center">
+
+### ⭐ Star this repo if you found it helpful!
+
+Made with ❤️ by Lemayan
+
+</div>
