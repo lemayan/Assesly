@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: assesly-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install --include=dev && npx prisma generate && npm run build
+    startCommand: npx prisma migrate deploy && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
+  
+  - type: pserv
+    name: assesly-db
+    env: docker
+    plan: free
+    region: oregon
+    ipAllowList: []

@@ -17,3 +17,6 @@ backend/prisma/*.db*
 # Build
 backend/dist
 frontend/dist
+
+# Local Netlify folder
+.netlify
